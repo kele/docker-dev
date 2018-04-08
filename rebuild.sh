@@ -1,1 +1,1 @@
-docker build --no-cache -t dev
+docker build --no-cache -t dev .
