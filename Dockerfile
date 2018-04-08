@@ -39,6 +39,4 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.v
     && mkdir ~/.vim-backups \
     && vim +PluginInstall +qall
 
-# C++
-
-# Python
+RUN apt-get clean
