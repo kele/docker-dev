@@ -1,0 +1,3 @@
+Use run.sh for (building and) running a dev environment.
+
+rebuild.sh for rebuilding (uses --no-cache). Useful if you want to make a fresh setup.
