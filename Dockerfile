@@ -1,7 +1,6 @@
 FROM ubuntu:17.10
-LABEL maintainer="damian.bogel@gmail.com"
 
-ENV LANG en_US.UTF-8
+LABEL maintainer="damian.bogel@gmail.com"
 
 RUN apt-get update
 
