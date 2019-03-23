@@ -31,6 +31,7 @@ RUN apt-get install -y --force-yes \
 
 RUN ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
+# Vim setup
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
     && ln -s ~/.dotfiles/vimrc ~/.vimrc \
     && git clone https://github.com/flazz/vim-colorschemes.git ~/colorschemes \
