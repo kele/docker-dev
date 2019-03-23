@@ -31,6 +31,13 @@ RUN apt-get install -y --force-yes \
 
 RUN ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
+# Rust
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN $HOME/.cargo/bin/rustup component add rustfmt
+## Autocompletion
+RUN $HOME/.cargo/bin/rustup component add rust-src
+RUN $HOME/.cargo/bin/cargo install --vers 2.0.14 racer
+
 # Vim setup
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
     && ln -s ~/.dotfiles/vimrc ~/.vimrc \
