@@ -5,4 +5,4 @@ echo "==========================================================================
 echo
 
 docker build -t dev .
-docker run -it -e "TERM=xterm-256color" dev /bin/zsh
+docker run -it -e "TERM=xterm-256color" -v $(readlink -f `pwd`/shared/workspace):/work dev /bin/zsh
