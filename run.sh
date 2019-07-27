@@ -4,5 +4,6 @@ echo "See: https://docs.docker.com/engine/security/security/#docker-daemon-attac
 echo "========================================================================================="
 echo
 
-docker build -t dev .
-docker run -it -e "TERM=xterm-256color" -v $(readlink -f `pwd`/shared/workspace):/work dev /bin/zsh
+set -x
+docker build -t rust-dev .
+docker run -it -e "TERM=xterm-256color" -v $(readlink -f `pwd`/shared/workspace):/work rust-dev /bin/zsh
