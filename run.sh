@@ -6,4 +6,4 @@ echo
 
 set -x
 docker build -t rust-dev .
-docker run -it -e "TERM=xterm-256color" -v $(readlink -f `pwd`/shared/workspace):/work rust-dev /bin/zsh
+docker run -it -e "TERM=xterm-256color" -e "USER=kele" -v $(readlink -f `pwd`/shared/workspace):/work rust-dev /bin/zsh
