@@ -38,8 +38,14 @@ RUN $HOME/.cargo/bin/rustup component add rustfmt
 RUN $HOME/.cargo/bin/rustup component add rust-src
 RUN $HOME/.cargo/bin/cargo install --vers 2.0.14 racer
 
+
 # Golang
 RUN apt-get install -y golang-go
+RUN apt-get install -y software-properties-common
+RUN apt-add-repository -y ppa:longsleep/golang-backports
+RUN apt-get update
+RUN apt-get install -y golang-go
+#RUN go get golang.org/x/tools/gopls@latest
 
 # Vim setup
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim \
