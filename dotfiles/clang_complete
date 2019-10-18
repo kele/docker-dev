@@ -1,0 +1,6 @@
+-DDEBUG
+-I/usr/include/c++/7
+-I/usr/include/x86_64-linux-gnu/c++/7
+-Wall
+-pedantic
+-std=c++1z
